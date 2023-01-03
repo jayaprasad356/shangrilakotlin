@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background"
+    android:orientation="vertical"
+    tools:context=".activites.HomeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/First"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="50dp"
+                        android:fontFamily="@font/montbold"
+                        android:text="₹"
+                        android:textColor="@color/Red_Project"
+                        android:textSize="28sp" />
+                    <TextView
+                        android:id="@+id/TvWalletBalance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50dp"
+                        android:fontFamily="@font/montbold"
+                        android:text="500"
+                        android:textColor="@color/Red_Project"
+                        android:textSize="25sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50dp"
+                        android:fontFamily="@font/montbold"
+                        android:text="Wallet Amount"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/CvRechargeWallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginHorizontal="60dp"
+                    android:layout_marginTop="20dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/Primary"
+                    app:cardCornerRadius="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Recharge wallet"
+                        android:layout_gravity="center"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/montbold"
+                        android:textColor="@color/Background"/>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyt2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/First"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montbold"
+                    android:text="Submission Date"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/TvSubmissionDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/etbackfdefault"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/montsemibold"
+                    android:gravity="center"
+                    android:text="Select date"
+                    android:textColor="#ACACAC"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/montbold"
+                    android:text="Electricity Meter Reading - Day"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edMeterDay"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/etbackfdefault"
+                    android:cursorVisible="false"
+                    android:fontFamily="@font/montsemibold"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/montbold"
+                    android:text="Electricity Meter Reading - Night"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edMeterNight"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/etbackfdefault"
+                    android:cursorVisible="false"
+                    android:fontFamily="@font/montsemibold"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/montbold"
+                    android:text="Gas Meter Reading"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edGasMeter"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/etbackfdefault"
+                    android:cursorVisible="false"
+                    android:fontFamily="@font/montsemibold"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/CvCalculate"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginHorizontal="70dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="50dp"
+                    app:cardBackgroundColor="@color/Primary"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/montbold"
+                        android:text="Calculate"
+                        android:textColor="@color/Background"
+                        android:textSize="14sp" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/FabLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/Red_Project"
+        android:backgroundTint="@color/Red_Project"
+        android:elevation="0dp"
+        android:src="@drawable/logout"
+        app:backgroundTint="@color/Red_Project"
+        app:elevation="0dp"
+        app:rippleColor="@color/Red_Project"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+</RelativeLayout>

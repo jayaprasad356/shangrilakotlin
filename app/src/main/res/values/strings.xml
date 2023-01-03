@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Shangrila</string>
+
+    <string-array name="property_type">
+        <item>Detached</item>
+        <item>Semi detached</item>
+        <item>Terraced</item>
+        <item>Flat</item>
+        <item>Cottage</item>
+        <item>Bungalow</item>
+        <item>Mansion</item>
+    </string-array>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#191819"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Enter Evc code"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montbold"/>
+
+    <EditText
+        android:id="@+id/evcCode"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/etbackfdefault"
+        android:cursorVisible="false"
+        android:fontFamily="@font/montsemibold"
+        android:layout_marginHorizontal="40dp"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CvRecharge"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginHorizontal="70dp"
+        android:layout_marginTop="20dp"
+        app:cardElevation="0dp"
+        android:layout_marginBottom="50dp"
+        app:cardBackgroundColor="@color/Primary"
+        app:cardCornerRadius="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recharge"
+            android:layout_gravity="center"
+            android:textSize="14sp"
+            android:fontFamily="@font/montbold"
+            android:textColor="@color/Background"/>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
