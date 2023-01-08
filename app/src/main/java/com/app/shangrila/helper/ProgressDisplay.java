@@ -1,4 +1,4 @@
-package com.greymatter.shangrila.helper;
+package com.app.shangrila.helper;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
-import com.greymatter.shangrila.R;
+import com.app.shangrila.R;
 
 
 public class ProgressDisplay {

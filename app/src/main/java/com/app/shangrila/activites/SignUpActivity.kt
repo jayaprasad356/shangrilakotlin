@@ -1,13 +1,13 @@
-package com.greymatter.shangrila.activites
+package com.app.shangrila.activites
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.greymatter.shangrila.Tools.Constants
-import com.greymatter.shangrila.databinding.ActivitySignUpBinding
-import com.greymatter.shangrila.helper.ApiConfig
+import com.app.shangrila.Tools.Constants
+import com.app.shangrila.databinding.ActivitySignUpBinding
+import com.app.shangrila.helper.ApiConfig
 import org.json.JSONException
 import org.json.JSONObject
 
@@ -44,7 +44,7 @@ class SignUpActivity : AppCompatActivity() {
                 try {
                     val jsonObject = JSONObject(response)
                     if (jsonObject.getBoolean(Constants.SUCCESS)) {
-                        val intent = Intent(this@SignUpActivity, HomeActivity::class.java)
+                        val intent = Intent(this@SignUpActivity, LoginActivity::class.java)
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                         Toast.makeText(
@@ -64,6 +64,6 @@ class SignUpActivity : AppCompatActivity() {
                     e.printStackTrace()
                 }
             }
-        }, this@SignUpActivity, Constants.SIGNUP_URL, params, true)
+        }, this@SignUpActivity, Constants.SIGNUP_URL, params, true,1)
     }
 }

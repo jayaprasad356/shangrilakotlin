@@ -1,4 +1,4 @@
-package com.greymatter.shangrila
+package com.app.shangrila
 
 import org.junit.Test
 

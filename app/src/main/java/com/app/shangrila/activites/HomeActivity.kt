@@ -1,4 +1,4 @@
-package com.greymatter.shangrila.activites
+package com.app.shangrila.activites
 
 import android.annotation.SuppressLint
 import android.app.DatePickerDialog
@@ -11,11 +11,11 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.greymatter.shangrila.R
-import com.greymatter.shangrila.Tools.Constants
-import com.greymatter.shangrila.databinding.ActivityHomeBinding
-import com.greymatter.shangrila.helper.ApiConfig
-import com.greymatter.shangrila.helper.Session
+import com.app.shangrila.R
+import com.app.shangrila.Tools.Constants
+import com.app.shangrila.databinding.ActivityHomeBinding
+import com.app.shangrila.helper.ApiConfig
+import com.app.shangrila.helper.Session
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
@@ -82,12 +82,9 @@ class HomeActivity : AppCompatActivity() {
         //Recharge wallet BottomSheet Functionality
         val edEvcCode = walletRechargeBottomSheetDialog.findViewById<EditText>(R.id.evcCode)
         walletRechargeBottomSheetDialog.findViewById<CardView>(R.id.CvRecharge)!!.setOnClickListener {
-            when {
-                edEvcCode!!.text.toString().isNotEmpty() -> rechargeApi(
-                    edEvcCode.text.toString().trim()
-                )
-                else -> Toast.makeText(this@HomeActivity,"Enter evc Code",Toast.LENGTH_LONG).show()
-            }
+            rechargeApi(
+                edEvcCode!!.text.toString().trim()
+            )
         }
 
         //DATE Picker
@@ -110,6 +107,7 @@ class HomeActivity : AppCompatActivity() {
         params[Constants.EVC_CODE] = evc
         params[Constants.USER_ID] = session.getData(Constants.ID)
         ApiConfig.RequestToVolley({ result, response ->
+            Log.d("RECHARGE_API_RES",response);
             if (result) {
                 try {
                     val jsonObject = JSONObject(response)
@@ -149,11 +147,12 @@ class HomeActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
             }
-        }, this@HomeActivity, Constants.ADD_RECHARGE_URL, params, true)
+        }, this@HomeActivity, Constants.ADD_RECHARGE_URL, params, true,1)
     }
 
     //Api to Calculate
     private fun calculate() {
+        Log.d("CALCULATE_RESPONSE", Constants.CALCULATE_BILL_URL);
         val params: MutableMap<String, String> = HashMap()
         params[Constants.USER_ID] = session.getData(Constants.ID)
         params[Constants.EMR_DAY] = binding.edMeterDay.text.toString().trim { it <= ' ' }
@@ -184,7 +183,7 @@ class HomeActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
             }
-        }, this@HomeActivity, Constants.CALCULATE_BILL_URL, params, true)
+        }, this@HomeActivity, Constants.CALCULATE_BILL_URL, params, true,1)
 
     }
 
@@ -246,6 +245,6 @@ class HomeActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
             }
-        }, this@HomeActivity, Constants.PAYBILL_URL, params, true)
+        }, this@HomeActivity, Constants.PAYBILL_URL, params, true,1)
     }
 }

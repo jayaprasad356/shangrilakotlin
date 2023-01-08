@@ -1,4 +1,4 @@
-package com.greymatter.shangrila.helper;
+package com.app.shangrila.helper;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.NetworkResponse;

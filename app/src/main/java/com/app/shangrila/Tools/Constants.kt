@@ -1,24 +1,15 @@
-package com.greymatter.shangrila.Tools
+package com.app.shangrila.Tools
 
 class Constants {
 
     companion object Cons {
-        const val MainBaseUrl = "https://shangrila.greymatterworks.in/"
-
-        //public static final String MainBaseUrl = "http://192.168.43.38/shangrila/";
-        const val BaseUrl = MainBaseUrl + "api/"
-        const val LOGIN_URL = BaseUrl + "login.php"
-        const val SIGNUP_URL = BaseUrl + "signup.php"
-        const val ADD_RECHARGE_URL = BaseUrl + "add-recharge.php"
-        const val PAYBILL_URL = BaseUrl + "paybill.php"
-        const val ADD_USER_URL = BaseUrl + "add_user.php"
-        const val USER_LIST_URL = BaseUrl + "user_list.php"
-        const val CALCULATE_BILL_URL = BaseUrl + "calculate-bill.php"
-        const val TRANSACTIONSLIST_URL = BaseUrl + "transactions_list.php"
-        const val ADD_TRANSACTION_URL = BaseUrl + "add_transaction.php"
-        const val UPDATE_USER_URL = BaseUrl + "update_user.php"
-        const val UPDATE_NEED_URL = BaseUrl + "update_need.php"
-        const val DELETE_USER = BaseUrl + "delete_user.php"
+        const val MainBaseUrl = "BASE URL HERE"
+        const val BaseUrl = MainBaseUrl + "api/v1/"
+        const val LOGIN_URL = BaseUrl + "login"
+        const val SIGNUP_URL = BaseUrl + "signup"
+        const val ADD_RECHARGE_URL = BaseUrl + "recharge"
+        const val PAYBILL_URL = BaseUrl + "paybill"
+        const val CALCULATE_BILL_URL = BaseUrl + "calculatebill"
         const val SUCCESS = "success"
         const val TOTAL_AMOUNT = "total_amount"
         const val MESSAGE = "message"

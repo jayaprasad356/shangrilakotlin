@@ -1,13 +1,14 @@
-package com.greymatter.shangrila.activites
+package com.app.shangrila.activites
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.greymatter.shangrila.Tools.Constants
-import com.greymatter.shangrila.databinding.ActivityLoginBinding
-import com.greymatter.shangrila.helper.ApiConfig
-import com.greymatter.shangrila.helper.Session
+import com.app.shangrila.Tools.Constants
+import com.app.shangrila.databinding.ActivityLoginBinding
+import com.app.shangrila.helper.ApiConfig
+import com.app.shangrila.helper.Session
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
@@ -44,6 +45,7 @@ class LoginActivity : AppCompatActivity() {
         params[Constants.EMAIL] = email.trim()
         params[Constants.PASSWORD] = password.trim()
         ApiConfig.RequestToVolley({ result, response ->
+            Log.d("LOGIN_API_RES",response);
             if (result) {
                 try {
                     val jsonObject = JSONObject(response)
@@ -75,15 +77,20 @@ class LoginActivity : AppCompatActivity() {
                         ).show()
                     }
                 } catch (e: JSONException) {
+                    Toast.makeText(
+                        this@LoginActivity,
+                        "" + e.message,
+                        Toast.LENGTH_SHORT
+                    ).show()
                     e.printStackTrace()
                 }
             } else {
                 Toast.makeText(
                     this@LoginActivity,
-                    java.lang.String.valueOf(response) + java.lang.String.valueOf(result),
+                    java.lang.String.valueOf(response),
                     Toast.LENGTH_SHORT
                 ).show()
             }
-        }, this@LoginActivity, Constants.LOGIN_URL, params, true)
+        }, this@LoginActivity, Constants.LOGIN_URL, params, true,1)
     }
 }

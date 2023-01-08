@@ -1,4 +1,4 @@
-package com.greymatter.shangrila.helper;
+package com.app.shangrila.helper;
 
 public interface VolleyCallback {
     void onSuccess(boolean result, String message);

@@ -1,4 +1,4 @@
-package com.greymatter.shangrila
+package com.app.shangrila
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

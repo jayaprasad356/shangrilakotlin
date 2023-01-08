@@ -1,11 +1,11 @@
-package com.greymatter.shangrila.activites
+package com.app.shangrila.activites
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import com.greymatter.shangrila.R
-import com.greymatter.shangrila.helper.Session
+import com.app.shangrila.R
+import com.app.shangrila.helper.Session
 
 class SplashActivity : AppCompatActivity() {
     private lateinit var session: Session

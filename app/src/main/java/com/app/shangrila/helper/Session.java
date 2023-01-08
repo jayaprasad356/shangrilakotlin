@@ -1,11 +1,11 @@
-package com.greymatter.shangrila.helper;
+package com.app.shangrila.helper;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
-import com.greymatter.shangrila.activites.LoginActivity;
+import com.app.shangrila.activites.LoginActivity;
 
 
 public class Session {

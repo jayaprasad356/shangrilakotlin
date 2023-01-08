@@ -1,4 +1,4 @@
-package com.greymatter.shangrila.helper;
+package com.app.shangrila.helper;
 
 public class DataPart {
     private String fileName;
