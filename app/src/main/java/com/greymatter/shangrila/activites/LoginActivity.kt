@@ -20,18 +20,21 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         session = Session(this@LoginActivity)
+        binding.cvSignUp.setOnClickListener {
+            startActivity(Intent(this@LoginActivity, SignUpActivity::class.java))
+        }
         binding.cvLogin.setOnClickListener {
             when {
-                binding.edEmail.text.toString().isEmpty() || binding.edPassword.text.toString().isEmpty() -> {
-                    Toast.makeText(this,"Check Credentials Once",Toast.LENGTH_LONG).show()
+                binding.edEmail.text.toString().isEmpty() || binding.edPassword.text.toString()
+                    .isEmpty() -> {
+                    Toast.makeText(this, "Check Credentials Once", Toast.LENGTH_LONG).show()
                 }
                 else -> {
-                    loginWithApi(binding.edEmail.text.toString(),binding.edPassword.text.toString())
+                    loginWithApi(
+                        binding.edEmail.text.toString(),
+                        binding.edPassword.text.toString()
+                    )
                 }
-        }
-
-        binding.TvSignUp.setOnClickListener {
-                    startActivity(Intent(this,SignUpActivity::class.java))
             }
         }
     }

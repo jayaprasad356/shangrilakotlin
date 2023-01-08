@@ -17,10 +17,6 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.tvSignIn.setOnClickListener {
-            startActivity(Intent(this,LoginActivity::class.java))
-            finish()
-        }
         binding.cvSignUp.setOnClickListener {
             when {
                 binding.edEmail.text.toString().isEmpty() -> binding.edEmail.apply { this.error = "enterEmail";this.requestFocus() }
